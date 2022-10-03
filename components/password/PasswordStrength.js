@@ -3,7 +3,9 @@ import { useSelector } from 'react-redux';
 import generatePasswordStrengthName from '../../utils/generatePasswordStrengthName';
 
 const PasswordStrength = () => {
-  const { passwordStrength } = useSelector((store) => store.password);
+  const passwordStrength = useSelector(
+    (store) => store.password.passwordStrength
+  );
 
   return (
     <section className="flex items-center justify-between bg-darkDray p-4">
