@@ -8,12 +8,16 @@ import {
 
 const PasswordFeatures = () => {
   const dispatch = useDispatch();
-  const {
-    hasLowercaseAlphabets,
-    hasUppercaseAlphabets,
-    hasNumbers,
-    hasSpecialCharacters,
-  } = useSelector((store) => store.password);
+  const hasLowercaseAlphabets = useSelector(
+    (store) => store.password.hasLowercaseAlphabets
+  );
+  const hasUppercaseAlphabets = useSelector(
+    (store) => store.password.hasUppercaseAlphabets
+  );
+  const hasSpecialCharacters = useSelector(
+    (store) => store.password.hasSpecialCharacters
+  );
+  const hasNumbers = useSelector((store) => store.password.hasNumbers);
 
   return (
     <section className="bg-lightGray py-4 text-white">
