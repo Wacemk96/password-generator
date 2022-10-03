@@ -1,9 +1,9 @@
-import React, { useState, memo } from 'react';
+import React, { useState, memo, useMemo } from 'react';
 import { FiCopy } from 'react-icons/fi';
 import { useSelector } from 'react-redux';
 
-const DisplayPassword = memo(() => {
-  const { password } = useSelector((store) => store.password);
+const DisplayPassword = () => {
+  const password = useSelector((store) => store.password.password);
   const copyToClipboard = () => {
     navigator.clipboard.writeText(password);
   };
@@ -19,6 +19,6 @@ const DisplayPassword = memo(() => {
       </div>
     </div>
   );
-});
+};
 
 export default DisplayPassword;
