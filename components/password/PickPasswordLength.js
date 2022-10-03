@@ -3,7 +3,7 @@ import { changePasswordLength } from '../../passwordSlice';
 
 const PickPasswordLength = () => {
   const dispatch = useDispatch();
-  const { passwordLength } = useSelector((store) => store.password);
+  const passwordLength = useSelector((store) => store.password.passwordLength);
 
   return (
     <section className="bg-lightGray py-4 text-white">
