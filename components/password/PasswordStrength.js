@@ -15,11 +15,15 @@ const PasswordStrength = () => {
         </p>
       </div>
       <div className="flex items-center gap-2">
-        <p className="font-bold uppercase tracking-widest text-white">
+        <p
+          className="font-bold uppercase tracking-widest text-white"
+          data-testid="password-strength"
+        >
           {generatePasswordStrengthName(passwordStrength)}
         </p>
         <div className="flex gap-1">
           <div
+            data-testid="strength-bar-1"
             className={`h-10 w-3 border-2 ${
               passwordStrength === 1
                 ? 'border-red-500 bg-red-500'
@@ -33,6 +37,7 @@ const PasswordStrength = () => {
             }`}
           ></div>
           <div
+            data-testid="strength-bar-2"
             className={`h-10 w-3  border-2 ${
               passwordStrength === 2
                 ? 'border-yellow bg-yellow'
@@ -44,6 +49,7 @@ const PasswordStrength = () => {
             }`}
           ></div>
           <div
+            data-testid="strength-bar-3"
             className={`h-10 w-3  border-2 ${
               passwordStrength === 3
                 ? 'border-yellow bg-yellow'
@@ -53,6 +59,7 @@ const PasswordStrength = () => {
             }`}
           ></div>
           <div
+            data-testid="strength-bar-4"
             className={`h-10 w-3 border-2 ${
               passwordStrength === 4
                 ? 'border-limeGreen bg-limeGreen'
