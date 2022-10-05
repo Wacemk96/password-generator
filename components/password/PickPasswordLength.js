@@ -9,13 +9,19 @@ const PickPasswordLength = () => {
     <section className="bg-lightGray py-4 text-white">
       <div className="flex items-center justify-between">
         <p className="text-lg">Character Length</p>
-        <p className="text-4xl font-bold text-limeGreen">{passwordLength}</p>
+        <p
+          className="text-4xl font-bold text-limeGreen"
+          data-testid="password-length"
+        >
+          {passwordLength}
+        </p>
       </div>
       <div className=" text-white">
         <input
+          data-testid="range-slider"
           id="minmax-range"
           type="range"
-          min={0}
+          min={4}
           max={50}
           value={passwordLength}
           onChange={(e) => dispatch(changePasswordLength(e.target.value))}
