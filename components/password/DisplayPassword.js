@@ -13,7 +13,12 @@ const DisplayPassword = () => {
       className="mb-4 flex  cursor-pointer items-center justify-between gap-4 bg-lightGray py-4"
       onClick={() => copyToClipboard()}
     >
-      <p className="break-all text-4xl text-white">{password}</p>
+      <p
+        className="break-all text-4xl text-white"
+        data-testid="password-display"
+      >
+        {password}
+      </p>
       <div className="text-3xl text-limeGreen transition-colors duration-150 ease-in hover:text-white">
         <FiCopy />
       </div>
