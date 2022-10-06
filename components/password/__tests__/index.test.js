@@ -1,7 +1,7 @@
 import { screen, fireEvent, cleanup } from '@testing-library/react';
 import '@testing-library/jest-dom';
 import Password from '../index';
-import { renderWithProviders } from '../../../pages/test-utils/renderWithProviders';
+import { renderWithProviders } from '../__tests__/test-utils/renderWithProviders';
 
 beforeEach(cleanup);
 
