@@ -1,4 +1,4 @@
-import { screen, render, fireEvent, cleanup } from '@testing-library/react';
+import { screen, fireEvent, cleanup } from '@testing-library/react';
 import '@testing-library/jest-dom';
 import Home from '../index';
 import { renderWithProviders } from '../test-utils/renderWithProviders';
